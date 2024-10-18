@@ -66,6 +66,10 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
   background: beige;
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const Left = styled.div`
@@ -73,6 +77,11 @@ const Left = styled.div`
   margin-right: 60px;
   display: flex;
   justify-content: end;
+  @media (max-width: 1024px) {
+    width: 100%;
+    margin-right: 0px;
+    justify-content: center;
+  }
 
   & .profile-image {
     width: 400px;
@@ -100,4 +109,13 @@ const Right = styled.h1`
   flex-direction: column;
   justify-content: center;
   text-align: left;
+  & span {
+    font-size: 36px;
+  }
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    padding-left: 0;
+    align-items: center;
+  }
 `;

@@ -39,12 +39,14 @@ const Skills = () => {
           <span className="category">
             <MdLanguage /> Language
           </span>
-          {techStack.languages.map((tech, index) => (
-            <ListItem key={index} bgColor={tech.bgColor} color={tech.color}>
-              {tech.icon}
-              <span>{tech.name}</span>
-            </ListItem>
-          ))}
+          <div className="stack-list">
+            {techStack.languages.map((tech, index) => (
+              <ListItem key={index} bgColor={tech.bgColor} color={tech.color}>
+                {tech.icon}
+                <span>{tech.name}</span>
+              </ListItem>
+            ))}
+          </div>
         </Row>
         <Row>
           <span className="category">
@@ -78,8 +80,8 @@ const Col = styled.div`
   gap: 24px;
   margin: 40px auto;
   width: 1240px;
-  max-width: 80%;
-  padding: 50px;
+  max-width: 75%;
+  padding: 42px;
   border-radius: 24px;
   background: white;
 `;
