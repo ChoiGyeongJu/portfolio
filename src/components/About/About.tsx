@@ -72,7 +72,7 @@ const Item = styled.div`
       font-size: 20px;
     }
     & p {
-      word-break: keep-all;
+      line-break: anywhere;
     }
   }
 `;

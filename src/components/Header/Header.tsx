@@ -14,10 +14,15 @@ const Header = () => {
   const handleClickItem = (target: string) => {
     setIsMenuOpen(false);
     const elem = document.getElementById(target);
+    console.log(target, elem);
+
     if (elem) {
-      const elemRect = elem.getBoundingClientRect();
-      const offset = elemRect.top + window.scrollY - 75;
-      window.scrollTo({ top: offset, behavior: 'smooth' });
+      // requestAnimationFrame을 사용하여 스크롤 이동
+      requestAnimationFrame(() => {
+        const elemRect = elem.getBoundingClientRect();
+        const offset = elemRect.top + window.scrollY - 75; // 헤더 높이를 고려하여 조정
+        window.scrollTo({ top: offset, behavior: 'smooth' });
+      });
     }
   };
 
