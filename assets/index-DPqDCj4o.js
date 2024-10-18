@@ -315,4 +315,4 @@ Error generating stack: `+o.message+`
   height: 100%;
   display: flex;
   margin: 0 auto;
-`,V3=()=>O.jsx(Mm,{children:O.jsx(Lm,{children:O.jsxs(Tr,{path:"/",element:O.jsx(W3,{}),children:[O.jsx(Tr,{path:"*",element:O.jsx(Fc,{to:"/main",replace:!0})}),O.jsx(Tr,{path:"/",element:O.jsx(Fc,{to:"/main",replace:!0})}),O.jsx(Tr,{path:"main",element:O.jsx($3,{})})]})})});function Q3(){return O.jsx(V3,{})}Vp(document.getElementById("root")).render(O.jsx(z.StrictMode,{children:O.jsx(Q3,{})}));
+`,V3=()=>O.jsx(Mm,{children:O.jsx(Lm,{children:O.jsxs(Tr,{path:"/",element:O.jsx(W3,{}),children:[O.jsx(Tr,{path:"*",element:O.jsx(Fc,{to:"/portfolio",replace:!0})}),O.jsx(Tr,{path:"/",element:O.jsx(Fc,{to:"/portfolio",replace:!0})}),O.jsx(Tr,{path:"portfolio",element:O.jsx($3,{})})]})})});function Q3(){return O.jsx(V3,{})}Vp(document.getElementById("root")).render(O.jsx(z.StrictMode,{children:O.jsx(Q3,{})}));
