@@ -8,7 +8,7 @@ interface Props {
 const Title = ({ color, label }: Props) => {
   return (
     <TitleWrap>
-      <Label>{label}</Label>
+      <Label color={color}>{label}</Label>
     </TitleWrap>
   );
 };
@@ -23,5 +23,6 @@ const TitleWrap = styled.div<{ color?: string }>`
 
 const Label = styled.h1`
   padding: 12px;
+  color: ${props => props.color && props.color};
   border-bottom: 4px solid ${props => (props.color ? props.color : 'black')};
 `;
