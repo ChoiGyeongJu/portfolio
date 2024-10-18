@@ -1,5 +1,5 @@
 # Page Url
-[https://choigyeongju.github.io/thumbnail_maker/](https://choigyeongju.github.io/portfolio/)
+https://choigyeongju.github.io/portfolio/
 
 # Portfolio Home Page
 
