@@ -8,10 +8,10 @@ const router = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route path="*" element={<Navigate to={'/main'} replace />} />
-          <Route path="/" element={<Navigate to={'/main'} replace />} />
+          <Route path="*" element={<Navigate to={'/portfolio'} replace />} />
+          <Route path="/" element={<Navigate to={'/portfolio'} replace />} />
 
-          <Route path="main" element={<Main />} />
+          <Route path="portfolio" element={<Main />} />
         </Route>
       </Routes>
     </BrowserRouter>
