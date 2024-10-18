@@ -61,6 +61,7 @@ export default Banner;
 
 const Wrapper = styled.div`
   width: 100%;
+  margin-top: 80px;
   padding: 120px 0;
   display: flex;
   flex-direction: row;
