@@ -70,6 +70,11 @@ const Row = styled.div`
   flex-direction: row;
   gap: 100px;
   margin: 60px 0;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const LeftArea = styled.div`
@@ -93,6 +98,11 @@ const RightArea = styled.div`
   align-items: start;
   border-left: 3px solid #ccc;
   padding-left: 100px;
+
+  @media (max-width: 900px) {
+    border-left: none;
+    padding-left: 0;
+  }
 
   & .company {
     margin: 0;

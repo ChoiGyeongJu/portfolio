@@ -4,6 +4,7 @@ import { About } from './About';
 import { Archiving } from './Archiving';
 import { Banner } from './Banner';
 import { Career } from './Career';
+import { Footer } from './Footer';
 import { Project } from './Project';
 import { Skills } from './Skills';
 
@@ -16,6 +17,7 @@ const Main = () => {
       <Archiving />
       <Project />
       <Career />
+      <Footer />
     </Wrapper>
   );
 };
