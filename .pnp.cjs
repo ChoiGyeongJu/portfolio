@@ -44,6 +44,7 @@ const RAW_RUNTIME_STATE =
           ["prettier", "npm:2.8.8"],\
           ["react", "npm:18.3.1"],\
           ["react-dom", "virtual:7d5abf024f2f4d5792bfe5aec1c4f41bb644e527377e1381ba17346aadc942947c084329cdaeb7d98abe55ea00d1be0c95014e301478286b6674ee5717ee32d5#npm:18.3.1"],\
+          ["react-icons", "virtual:7d5abf024f2f4d5792bfe5aec1c4f41bb644e527377e1381ba17346aadc942947c084329cdaeb7d98abe55ea00d1be0c95014e301478286b6674ee5717ee32d5#npm:5.3.0"],\
           ["react-router-dom", "virtual:7d5abf024f2f4d5792bfe5aec1c4f41bb644e527377e1381ba17346aadc942947c084329cdaeb7d98abe55ea00d1be0c95014e301478286b6674ee5717ee32d5#npm:6.27.0"],\
           ["react-slick", "virtual:7d5abf024f2f4d5792bfe5aec1c4f41bb644e527377e1381ba17346aadc942947c084329cdaeb7d98abe55ea00d1be0c95014e301478286b6674ee5717ee32d5#npm:0.30.2"],\
           ["react-type-animation", "virtual:7d5abf024f2f4d5792bfe5aec1c4f41bb644e527377e1381ba17346aadc942947c084329cdaeb7d98abe55ea00d1be0c95014e301478286b6674ee5717ee32d5#npm:3.2.0"],\
@@ -3692,6 +3693,7 @@ const RAW_RUNTIME_STATE =
           ["prettier", "npm:2.8.8"],\
           ["react", "npm:18.3.1"],\
           ["react-dom", "virtual:7d5abf024f2f4d5792bfe5aec1c4f41bb644e527377e1381ba17346aadc942947c084329cdaeb7d98abe55ea00d1be0c95014e301478286b6674ee5717ee32d5#npm:18.3.1"],\
+          ["react-icons", "virtual:7d5abf024f2f4d5792bfe5aec1c4f41bb644e527377e1381ba17346aadc942947c084329cdaeb7d98abe55ea00d1be0c95014e301478286b6674ee5717ee32d5#npm:5.3.0"],\
           ["react-router-dom", "virtual:7d5abf024f2f4d5792bfe5aec1c4f41bb644e527377e1381ba17346aadc942947c084329cdaeb7d98abe55ea00d1be0c95014e301478286b6674ee5717ee32d5#npm:6.27.0"],\
           ["react-slick", "virtual:7d5abf024f2f4d5792bfe5aec1c4f41bb644e527377e1381ba17346aadc942947c084329cdaeb7d98abe55ea00d1be0c95014e301478286b6674ee5717ee32d5#npm:0.30.2"],\
           ["react-type-animation", "virtual:7d5abf024f2f4d5792bfe5aec1c4f41bb644e527377e1381ba17346aadc942947c084329cdaeb7d98abe55ea00d1be0c95014e301478286b6674ee5717ee32d5#npm:3.2.0"],\
@@ -4244,6 +4246,28 @@ const RAW_RUNTIME_STATE =
           ["loose-envify", "npm:1.4.0"],\
           ["react", "npm:18.3.1"],\
           ["scheduler", "npm:0.23.2"]\
+        ],\
+        "packagePeers": [\
+          "@types/react",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["react-icons", [\
+      ["npm:5.3.0", {\
+        "packageLocation": "./.yarn/cache/react-icons-npm-5.3.0-3814684035-a53af0de55.zip/node_modules/react-icons/",\
+        "packageDependencies": [\
+          ["react-icons", "npm:5.3.0"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:7d5abf024f2f4d5792bfe5aec1c4f41bb644e527377e1381ba17346aadc942947c084329cdaeb7d98abe55ea00d1be0c95014e301478286b6674ee5717ee32d5#npm:5.3.0", {\
+        "packageLocation": "./.yarn/__virtual__/react-icons-virtual-24b7eb3423/0/cache/react-icons-npm-5.3.0-3814684035-a53af0de55.zip/node_modules/react-icons/",\
+        "packageDependencies": [\
+          ["react-icons", "virtual:7d5abf024f2f4d5792bfe5aec1c4f41bb644e527377e1381ba17346aadc942947c084329cdaeb7d98abe55ea00d1be0c95014e301478286b6674ee5717ee32d5#npm:5.3.0"],\
+          ["@types/react", "npm:18.3.11"],\
+          ["react", "npm:18.3.1"]\
         ],\
         "packagePeers": [\
           "@types/react",\
