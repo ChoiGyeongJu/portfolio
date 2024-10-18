@@ -71,5 +71,8 @@ const Item = styled.div`
       font-weight: 700;
       font-size: 20px;
     }
+    & p {
+      word-break: keep-all;
+    }
   }
 `;

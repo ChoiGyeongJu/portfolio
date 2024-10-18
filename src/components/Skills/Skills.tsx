@@ -103,6 +103,17 @@ const Row = styled.div`
     display: flex;
     flex-wrap: wrap;
   }
+
+  @media (max-width: 450px) {
+    flex-direction: column;
+    & .category {
+      margin-right: 0;
+      margin-bottom: 16px;
+    }
+    & .stack-list {
+      justify-content: start;
+    }
+  }
 `;
 
 const ListItem = styled.div<{ bgColor: string; color?: string }>`

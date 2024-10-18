@@ -86,7 +86,9 @@ const Content = styled.div`
   background-color: white;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
   width: 400px;
-  height: 235px;
+  max-width: 90%;
+  height: auto;
+  min-height: 235px;
   padding: 20px;
   border-radius: 16px;
   display: flex;
@@ -128,6 +130,7 @@ const Content = styled.div`
     display: flex;
     gap: 8px;
     margin-top: 8px;
+    flex-wrap: wrap;
     & .icon-box {
       display: flex;
       align-items: center;

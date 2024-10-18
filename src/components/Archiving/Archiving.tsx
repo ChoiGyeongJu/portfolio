@@ -51,6 +51,7 @@ const ContentWrap = styled.div`
 const Content = styled.div`
   cursor: pointer;
   background-color: white;
+  max-width: 80%;
   width: 400px;
   height: 220px;
   padding: 0 20px;
@@ -67,11 +68,11 @@ const Content = styled.div`
   }
 
   & .github {
-    width: 360px;
+    width: min(360px, 90%);
     border-radius: 100%;
   }
   & .blog {
-    width: 360px;
+    width: min(360px, 90%);
     margin: 18px 0 20px 0;
   }
 `;

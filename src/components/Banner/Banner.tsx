@@ -84,21 +84,23 @@ const Left = styled.div`
   }
 
   & .profile-image {
-    width: 400px;
-    height: 400px;
-    margin-bottom: 30px;
-    border-radius: 100%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    border-radius: 50%;
   }
 `;
 
 const SliderWrap = styled(Slider)`
-  width: 450px;
+  width: min(450px, 80%);
 
   & .container {
     display: flex !important;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    aspect-ratio: 1 / 1; /* 1:1 비율을 강제 */
+    overflow: hidden;
   }
 `;
 
@@ -117,5 +119,8 @@ const Right = styled.h1`
     width: 100%;
     padding-left: 0;
     align-items: center;
+    & span {
+      font-size: 24px;
+    }
   }
 `;
