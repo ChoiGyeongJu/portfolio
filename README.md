@@ -14,7 +14,6 @@ https://choigyeongju.github.io/portfolio/
 ## 프로젝트 소개
 
 <p align="justify">
-  백엔드 개발자 동기와 함께 2인으로 진행한 프로젝트입니다. <br>
   본인을 소개할 수 있는 개인 홈페이지가 있으면 좋을 것 같아 Private Hompage 프로젝트를 진행하게 되었습니다. <br>
   PC 뿐만아니라 모바일에서도 이용할 수 있게 반응형으로 개발하였습니다.
 </p>
