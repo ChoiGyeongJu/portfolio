@@ -69,7 +69,7 @@ export default Skills;
 const Wrap = styled.div`
   background: beige;
   margin: 0 auto;
-  padding-bottom: 40px;
+  padding-bottom: 60px;
 `;
 
 const Col = styled.div`

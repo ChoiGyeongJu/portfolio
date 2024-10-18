@@ -66,7 +66,7 @@ const Project = () => {
 export default Project;
 
 const Wrap = styled.div`
-  padding-bottom: 40px;
+  padding-bottom: 60px;
   background: #f5f5f5;
 `;
 

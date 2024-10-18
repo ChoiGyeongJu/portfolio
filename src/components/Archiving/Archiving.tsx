@@ -37,7 +37,7 @@ export default Archiving;
 
 const Wrap = styled.div`
   background-color: black;
-  padding-bottom: 40px;
+  padding-bottom: 60px;
 `;
 
 const ContentWrap = styled.div`

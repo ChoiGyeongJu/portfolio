@@ -47,7 +47,7 @@ const InfoWrap = styled.div`
   align-items: center;
   justify-content: center;
   max-width: 1300px;
-  margin: 40px auto;
+  margin: 60px auto;
 
   & svg {
     width: 32px;
