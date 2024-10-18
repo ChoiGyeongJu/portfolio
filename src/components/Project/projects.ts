@@ -7,7 +7,7 @@ export const projects = [
     links: {
       notion: '',
       github: 'https://github.com/ChoiGyeongJu/portfolio',
-      site: '',
+      site: 'https://choigyeongju.github.io/portfolio',
     },
   },
   {

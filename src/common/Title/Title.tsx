@@ -7,7 +7,7 @@ interface Props {
 
 const Title = ({ color, label }: Props) => {
   return (
-    <TitleWrap>
+    <TitleWrap id={label}>
       <Label color={color}>{label}</Label>
     </TitleWrap>
   );
