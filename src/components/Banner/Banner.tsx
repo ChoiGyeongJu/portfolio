@@ -38,7 +38,7 @@ const Banner = () => {
         <SliderWrap {...settings}>
           {images.map((image, index) => (
             <div className="container" key={index}>
-              <img src={image} alt={`Profile ${index + 1}`} className="profile-image" />
+              <img src={image} loading="lazy" className="profile-image" />
             </div>
           ))}
         </SliderWrap>

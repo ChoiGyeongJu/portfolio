@@ -1,24 +1,50 @@
+import { useEffect, useState } from 'react';
 import { FaGithub, FaGlobe } from 'react-icons/fa';
 import { SiNotion } from 'react-icons/si';
 
 import styled from 'styled-components';
 
 import { Title } from '../../common/Title';
-import { projects } from './projects';
+import { ProjectDetail } from './ProjectDetail';
+import { project_details, projects } from './projects';
 
 const Project = () => {
+  const [projectInfo, setProjectInfo] = useState<any | null>(null);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
+  const handleClickItem = (id: number) => {
+    const project = project_details.filter(v => v.id === id)[0];
+    setProjectInfo(project);
+  };
+
+  const handleClose = () => {
+    setProjectInfo(null);
+  };
+
+  // 모달이 열렸을 때 배경 스크롤 비활성화
+  useEffect(() => {
+    if (projectInfo) document.body.style.overflow = 'hidden';
+    else document.body.style.overflow = 'auto';
+  }, [projectInfo]);
+
   return (
     <Wrap>
       <Title label="PROJECTS" />
       <ContentWrap>
         {projects.map((v, i) => (
-          <Content key={i}>
+          <Content
+            key={i}
+            onClick={() => handleClickItem(v.id)}
+            onMouseEnter={() => setHoveredIndex(i)}
+            onMouseLeave={() => setHoveredIndex(null)}
+          >
+            {hoveredIndex === i && <DimmedOverlay />}
             <span className="title">{v.title}</span>
             <span className="date">{v.date}</span>
             <p className="description">{v.description}</p>
             <ul>
-              {v.features.map(feature => (
-                <li>{feature}</li>
+              {v.features.map((feature, index) => (
+                <li key={index}>{feature}</li>
               ))}
             </ul>
             <div className="links">
@@ -56,9 +82,11 @@ const Project = () => {
                 </a>
               )}
             </div>
+            {hoveredIndex === i && <ReadMore>Read More !</ReadMore>}
           </Content>
         ))}
       </ContentWrap>
+      {projectInfo && <ProjectDetail projectInfo={projectInfo} onClose={handleClose} />}
     </Wrap>
   );
 };
@@ -95,7 +123,6 @@ const Content = styled.div`
   align-items: start;
   flex-direction: column;
   gap: 6px;
-  transition: transform 0.3s ease;
   &:hover {
     transform: scale(1.05);
   }
@@ -141,4 +168,28 @@ const Content = styled.div`
       color: black;
     }
   }
+`;
+
+const DimmedOverlay = styled.div`
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 16px;
+  z-index: 1;
+`;
+
+const ReadMore = styled.div`
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
 `;
