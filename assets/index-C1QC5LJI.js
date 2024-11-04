@@ -295,7 +295,7 @@ Error generating stack: `+i.message+`
   & li {
     text-align: left;
   }
-`,N4=()=>w.jsx(I4,{children:w.jsxs(A4,{children:[w.jsx("div",{children:"© 2024 Choi Gyeongju. All Rights Reserved."}),w.jsxs(D4,{children:[w.jsx("a",{href:"https://github.com/ChoiGyeongJu",target:"_blank",children:"GitHub"}),w.jsx("a",{href:"mailto:rudwn5142@naver.com",children:"Contact"})]})]})}),I4=V.footer`
+`,N4=()=>w.jsx(I4,{children:w.jsxs(A4,{children:[w.jsx("div",{children:"© 2024 Choi Gyeongju. All Rights Reserved."}),w.jsxs(D4,{children:[w.jsx("a",{href:"https://hits.seeyoufarm.com",children:w.jsx("img",{src:"https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fchoigyeongju.github.io%2Fportfolio%2F&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"})}),w.jsx("a",{href:"https://github.com/ChoiGyeongJu",target:"_blank",children:"GitHub"}),w.jsx("a",{href:"mailto:rudwn5142@naver.com",children:"Contact"})]})]})}),I4=V.footer`
   width: 100%;
   background-color: #02343f;
   padding: 30px 0;
