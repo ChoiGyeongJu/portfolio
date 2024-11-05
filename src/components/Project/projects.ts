@@ -136,7 +136,7 @@ export const project_details = [
   },
   {
     id: 4,
-    title: '서울특별시 교육청 게시판',
+    title: '서울시교육청 게시판',
     description: `교육청 내부 게시판 서비스 개발`,
     images: [eduList, eduCategory, eduDetail, eduWrite],
     techStacks: [

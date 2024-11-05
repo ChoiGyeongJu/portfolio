@@ -30,7 +30,7 @@ const Career = () => {
           </div>
           <TaskWrapper>
             <div className="task-title">서울시 교육청 사업건</div>
-            <span className="date">2024.06 - 퇴사</span>
+            <span className="date">2024.09 - 퇴사</span>
             <ul>
               <li>React 기반의 게시판 서비스 개발</li>
               <li>TanStack Query를 활용한 상태 관리 및 데이터 캐싱 최적화</li>
@@ -40,7 +40,7 @@ const Career = () => {
           </TaskWrapper>
           <TaskWrapper>
             <div className="task-title">(주)푸디스트 사업건</div>
-            <span className="date">2023.06 - 2024.06</span>
+            <span className="date">2023.06 - 2024.08</span>
             <ul>
               <li>React 기반의 게시판 & 차트 서비스 개발</li>
               <li>Mobx를 활용한 전역 상태 관리</li>

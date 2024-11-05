@@ -104,7 +104,7 @@ const Header = styled.div`
   justify-content: space-between;
 `;
 
-const Title = styled.h3`
+const Title = styled.h4`
   margin: 0;
 `;
 
@@ -138,19 +138,6 @@ const Content = styled.div`
   h3 {
     margin: 0 0 8px;
   }
-  ul {
-    padding-left: 20px;
-  }
-`;
-
-const ImageContainer = styled.div`
-  width: 100%;
-  img {
-    width: 100%;
-    height: auto;
-    max-height: 500px;
-    object-fit: contain;
-  }
 `;
 
 const Description = styled.div`
@@ -172,12 +159,37 @@ const InfoWrap = styled.div`
   padding: 0 16px;
 `;
 
+const ImageContainer = styled.div`
+  width: 100%;
+  height: 50vh;
+  position: relative;
+  & img {
+    width: auto;
+    max-width: min(100vw, 900px);
+    height: 50vh;
+    object-fit: contain;
+  }
+`;
+
 const SliderWrap = styled(Slider)`
+  width: 100%;
+  height: 50vh;
+
   & .container {
     display: flex !important;
     align-items: center;
     justify-content: center;
     width: 100%;
-    overflow: hidden;
+    height: 100%;
+  }
+
+  & .slick-dots {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
   }
 `;
