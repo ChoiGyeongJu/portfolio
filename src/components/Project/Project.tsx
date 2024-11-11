@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { FaGithub, FaGlobe } from 'react-icons/fa';
 import { SiNotion } from 'react-icons/si';
+import { useNavigate } from 'react-router-dom';
 
 import styled from 'styled-components';
 
@@ -9,23 +10,32 @@ import { ProjectDetail } from './ProjectDetail';
 import { project_details, projects } from './projects';
 
 const Project = () => {
+  const nav = useNavigate();
+  const queryParams = new URLSearchParams(location.search);
+  const projectId = Number(queryParams.get('projectId') ?? null);
+
   const [projectInfo, setProjectInfo] = useState<any | null>(null);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const handleClickItem = (id: number) => {
-    const project = project_details.filter(v => v.id === id)[0];
-    setProjectInfo(project);
+    nav(`?projectId=${id}`);
   };
 
   const handleClose = () => {
-    setProjectInfo(null);
+    nav(-1);
   };
 
-  // 모달이 열렸을 때 배경 스크롤 비활성화
+  // 쿼리스트링 기준으로 모달 정보 세팅
   useEffect(() => {
-    if (projectInfo) document.body.style.overflow = 'hidden';
-    else document.body.style.overflow = 'auto';
-  }, [projectInfo]);
+    if (!projectId) {
+      setProjectInfo(null);
+      document.body.style.overflow = 'auto';
+    } else {
+      const project = project_details.filter(v => v.id === projectId)[0];
+      setProjectInfo(project);
+      document.body.style.overflow = 'hidden';
+    }
+  }, [projectId]);
 
   return (
     <Wrap>

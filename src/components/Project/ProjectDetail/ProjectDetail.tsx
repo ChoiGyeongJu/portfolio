@@ -34,7 +34,7 @@ const ProjectDetail = ({ projectInfo, onClose }: Props) => {
   const settings: Settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 300,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
