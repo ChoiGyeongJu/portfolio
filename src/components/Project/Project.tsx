@@ -61,6 +61,7 @@ const Project = () => {
               {v.links.notion && (
                 <a
                   href={v.links.notion}
+                  onClick={event => event.stopPropagation()}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="icon-box"
@@ -72,6 +73,7 @@ const Project = () => {
               {v.links.github && (
                 <a
                   href={v.links.github}
+                  onClick={event => event.stopPropagation()}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="icon-box"
@@ -83,6 +85,7 @@ const Project = () => {
               {v.links.site && (
                 <a
                   href={v.links.site}
+                  onClick={event => event.stopPropagation()}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="icon-box"
