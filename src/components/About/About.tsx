@@ -9,7 +9,7 @@ import {
 
 import styled from 'styled-components';
 
-import { Title } from '../../common/Title';
+import { FadeWrapper, Title } from '../../common';
 
 const About = () => {
   const items = [
@@ -23,18 +23,22 @@ const About = () => {
 
   return (
     <>
-      <Title label="ABOUT" />
-      <InfoWrap>
-        {items.map(v => (
-          <Item key={v.value}>
-            {v.icon}
-            <div className="text-area">
-              <span className="category">{v.category}</span>
-              <p>{v.value}</p>
-            </div>
-          </Item>
-        ))}
-      </InfoWrap>
+      <FadeWrapper>
+        <Title label="ABOUT" />
+      </FadeWrapper>
+      <FadeWrapper>
+        <InfoWrap>
+          {items.map(v => (
+            <Item key={v.value}>
+              {v.icon}
+              <div className="text-area">
+                <span className="category">{v.category}</span>
+                <p>{v.value}</p>
+              </div>
+            </Item>
+          ))}
+        </InfoWrap>
+      </FadeWrapper>
     </>
   );
 };

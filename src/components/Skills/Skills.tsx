@@ -11,7 +11,7 @@ import {
 
 import styled from 'styled-components';
 
-import { Title } from '../../common/Title';
+import { FadeWrapper, Title } from '../../common';
 
 const techStack = {
   languages: [
@@ -33,35 +33,39 @@ const techStack = {
 const Skills = () => {
   return (
     <Wrap>
-      <Title label="SKILLS" />
-      <Col>
-        <Row>
-          <span className="category">
-            <MdLanguage /> Language
-          </span>
-          <div className="stack-list">
-            {techStack.languages.map((tech, index) => (
-              <ListItem key={index} bgColor={tech.bgColor} color={tech.color}>
-                {tech.icon}
-                <span>{tech.name}</span>
-              </ListItem>
-            ))}
-          </div>
-        </Row>
-        <Row>
-          <span className="category">
-            <MdComputer /> Frontend
-          </span>
-          <div className="stack-list">
-            {techStack.frontend.map((tech, index) => (
-              <ListItem key={index} bgColor={tech.bgColor} color={tech.color}>
-                {tech.icon}
-                <span>{tech.name}</span>
-              </ListItem>
-            ))}
-          </div>
-        </Row>
-      </Col>
+      <FadeWrapper>
+        <Title label="SKILLS" />
+      </FadeWrapper>
+      <FadeWrapper>
+        <Col>
+          <Row>
+            <span className="category">
+              <MdLanguage /> Language
+            </span>
+            <div className="stack-list">
+              {techStack.languages.map((tech, index) => (
+                <ListItem key={index} bgColor={tech.bgColor} color={tech.color}>
+                  {tech.icon}
+                  <span>{tech.name}</span>
+                </ListItem>
+              ))}
+            </div>
+          </Row>
+          <Row>
+            <span className="category">
+              <MdComputer /> Frontend
+            </span>
+            <div className="stack-list">
+              {techStack.frontend.map((tech, index) => (
+                <ListItem key={index} bgColor={tech.bgColor} color={tech.color}>
+                  {tech.icon}
+                  <span>{tech.name}</span>
+                </ListItem>
+              ))}
+            </div>
+          </Row>
+        </Col>
+      </FadeWrapper>
     </Wrap>
   );
 };

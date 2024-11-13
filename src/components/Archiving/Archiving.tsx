@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import GithubIcon from '../../assets/github.png';
 import TistoryIcon from '../../assets/tistory.png';
-import { Title } from '../../common/Title';
+import { FadeWrapper, Title } from '../../common';
 
 const Archiving = () => {
   const handleClickItem = (target: 'github' | 'tistory') => {
@@ -12,23 +12,27 @@ const Archiving = () => {
 
   return (
     <Wrap>
-      <Title label="ARCHIVING" color="white" />
-      <ContentWrap>
-        <Content onClick={() => handleClickItem('github')}>
-          <img className="github" src={GithubIcon} />
-          <a href="https://github.com/ChoiGyeongJu" target="_blank">
-            https://github.com/ChoiGyeongJu
-          </a>
-          <span>소스 코드 저장소</span>
-        </Content>
-        <Content onClick={() => handleClickItem('tistory')}>
-          <img className="blog" src={TistoryIcon} />
-          <a href="https://gang-ju.tistory.com" target="_blank">
-            https://gang-ju.tistory.com/
-          </a>
-          <span>개인 블로그</span>
-        </Content>
-      </ContentWrap>
+      <FadeWrapper>
+        <Title label="ARCHIVING" color="white" />
+      </FadeWrapper>
+      <FadeWrapper>
+        <ContentWrap>
+          <Content onClick={() => handleClickItem('github')}>
+            <img className="github" src={GithubIcon} />
+            <a href="https://github.com/ChoiGyeongJu" target="_blank">
+              https://github.com/ChoiGyeongJu
+            </a>
+            <span>소스 코드 저장소</span>
+          </Content>
+          <Content onClick={() => handleClickItem('tistory')}>
+            <img className="blog" src={TistoryIcon} />
+            <a href="https://gang-ju.tistory.com" target="_blank">
+              https://gang-ju.tistory.com/
+            </a>
+            <span>개인 블로그</span>
+          </Content>
+        </ContentWrap>
+      </FadeWrapper>
     </Wrap>
   );
 };

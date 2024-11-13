@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 import styled from 'styled-components';
 
-import { Title } from '../../common/Title';
+import { FadeWrapper, Title } from '../../common';
 import { ProjectDetail } from './ProjectDetail';
 import { project_details, projects } from './projects';
 
@@ -39,66 +39,70 @@ const Project = () => {
 
   return (
     <Wrap>
-      <Title label="PROJECTS" />
-      <ContentWrap>
-        {projects.map((v, i) => (
-          <Content
-            key={i}
-            onClick={() => handleClickItem(v.id)}
-            onMouseEnter={() => setHoveredIndex(i)}
-            onMouseLeave={() => setHoveredIndex(null)}
-          >
-            {hoveredIndex === i && <DimmedOverlay />}
-            <span className="title">{v.title}</span>
-            <span className="date">{v.date}</span>
-            <p className="description">{v.description}</p>
-            <ul>
-              {v.features.map((feature, index) => (
-                <li key={index}>{feature}</li>
-              ))}
-            </ul>
-            <div className="links">
-              {v.links.notion && (
-                <a
-                  href={v.links.notion}
-                  onClick={event => event.stopPropagation()}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="icon-box"
-                >
-                  <SiNotion size={24} style={{ color: 'black' }} />
-                  Notion
-                </a>
-              )}
-              {v.links.github && (
-                <a
-                  href={v.links.github}
-                  onClick={event => event.stopPropagation()}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="icon-box"
-                >
-                  <FaGithub size={24} style={{ color: 'black' }} />
-                  Github
-                </a>
-              )}
-              {v.links.site && (
-                <a
-                  href={v.links.site}
-                  onClick={event => event.stopPropagation()}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="icon-box"
-                >
-                  <FaGlobe size={24} style={{ color: 'black' }} />
-                  Site Url
-                </a>
-              )}
-            </div>
-            {hoveredIndex === i && <ReadMore>Read More !</ReadMore>}
-          </Content>
-        ))}
-      </ContentWrap>
+      <FadeWrapper>
+        <Title label="PROJECTS" />
+      </FadeWrapper>
+      <FadeWrapper>
+        <ContentWrap>
+          {projects.map((v, i) => (
+            <Content
+              key={i}
+              onClick={() => handleClickItem(v.id)}
+              onMouseEnter={() => setHoveredIndex(i)}
+              onMouseLeave={() => setHoveredIndex(null)}
+            >
+              {hoveredIndex === i && <DimmedOverlay />}
+              <span className="title">{v.title}</span>
+              <span className="date">{v.date}</span>
+              <p className="description">{v.description}</p>
+              <ul>
+                {v.features.map((feature, index) => (
+                  <li key={index}>{feature}</li>
+                ))}
+              </ul>
+              <div className="links">
+                {v.links.notion && (
+                  <a
+                    href={v.links.notion}
+                    onClick={event => event.stopPropagation()}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="icon-box"
+                  >
+                    <SiNotion size={24} style={{ color: 'black' }} />
+                    Notion
+                  </a>
+                )}
+                {v.links.github && (
+                  <a
+                    href={v.links.github}
+                    onClick={event => event.stopPropagation()}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="icon-box"
+                  >
+                    <FaGithub size={24} style={{ color: 'black' }} />
+                    Github
+                  </a>
+                )}
+                {v.links.site && (
+                  <a
+                    href={v.links.site}
+                    onClick={event => event.stopPropagation()}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="icon-box"
+                  >
+                    <FaGlobe size={24} style={{ color: 'black' }} />
+                    Site Url
+                  </a>
+                )}
+              </div>
+              {hoveredIndex === i && <ReadMore>Read More !</ReadMore>}
+            </Content>
+          ))}
+        </ContentWrap>
+      </FadeWrapper>
       {projectInfo && <ProjectDetail projectInfo={projectInfo} onClose={handleClose} />}
     </Wrap>
   );
