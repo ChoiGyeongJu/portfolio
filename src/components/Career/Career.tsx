@@ -25,7 +25,9 @@ const Career = () => {
           <p className="description">프론트엔드 개발 담당, 게시판 모듈 담당</p>
           <div className="skill-list">
             {SKILL_LIST.map(v => (
-              <div className="skill">{v}</div>
+              <div key={v} className="skill">
+                {v}
+              </div>
             ))}
           </div>
           <TaskWrapper>

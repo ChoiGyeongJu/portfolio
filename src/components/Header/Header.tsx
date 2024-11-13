@@ -17,10 +17,9 @@ const Header = () => {
     console.log(target, elem);
 
     if (elem) {
-      // requestAnimationFrame을 사용하여 스크롤 이동
       requestAnimationFrame(() => {
         const elemRect = elem.getBoundingClientRect();
-        const offset = elemRect.top + window.scrollY - 75; // 헤더 높이를 고려하여 조정
+        const offset = elemRect.top + window.scrollY - 75;
         window.scrollTo({ top: offset, behavior: 'smooth' });
       });
     }
@@ -36,7 +35,9 @@ const Header = () => {
           </MenuIcon>
           <Menu isOpen={isMenuOpen}>
             {MenuItems.map(v => (
-              <div onClick={() => handleClickItem(v)}>{v}</div>
+              <div key={v} onClick={() => handleClickItem(v)}>
+                {v}
+              </div>
             ))}
           </Menu>
         </RightArea>

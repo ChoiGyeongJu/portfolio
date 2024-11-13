@@ -26,7 +26,7 @@ const About = () => {
       <Title label="ABOUT" />
       <InfoWrap>
         {items.map(v => (
-          <Item>
+          <Item key={v.value}>
             {v.icon}
             <div className="text-area">
               <span className="category">{v.category}</span>
