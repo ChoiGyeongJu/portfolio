@@ -4,9 +4,12 @@ import { TypeAnimation } from 'react-type-animation';
 
 import styled from 'styled-components';
 
-import Image1 from '../../assets/image1.jpg';
-import Image2 from '../../assets/image2.jpg';
-import Image3 from '../../assets/image3.jpg';
+import Image1JPG from '../../assets/image1.jpg';
+import Image1WebP from '../../assets/image1.webp';
+import Image2JPG from '../../assets/image2.jpg';
+import Image2WebP from '../../assets/image2.webp';
+import Image3JPG from '../../assets/image3.jpg';
+import Image3WebP from '../../assets/image3.webp';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 
@@ -18,14 +21,19 @@ const Banner = () => {
     }, 3000);
   }, []);
 
-  const images = [Image1, Image2, Image3];
+  const images = [
+    { webp: Image1WebP, jpg: Image1JPG },
+    { webp: Image2WebP, jpg: Image2JPG },
+    { webp: Image3WebP, jpg: Image3JPG },
+  ];
+
   const settings: Settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 2000,
     fade: true,
     prevArrow: <></>, // TODO: 아이콘 커스텀 적용
@@ -38,7 +46,10 @@ const Banner = () => {
         <SliderWrap {...settings}>
           {images.map((image, index) => (
             <div className="container" key={index}>
-              <img src={image} loading="lazy" className="profile-image" />
+              <picture>
+                <source srcSet={image.webp} type="image/webp" />
+                <img src={image.jpg} alt="profile image" className="profile-image" />
+              </picture>
             </div>
           ))}
         </SliderWrap>
@@ -84,8 +95,8 @@ const Left = styled.div`
   }
 
   & .profile-image {
-    width: 100%;
-    height: 100%;
+    width: min(450px, 70vw);
+    height: min(450px, 70vw);
     object-fit: cover;
     border-radius: 50%;
   }
@@ -99,7 +110,7 @@ const SliderWrap = styled(Slider)`
     align-items: center;
     justify-content: center;
     width: 100%;
-    aspect-ratio: 1 / 1; /* 1:1 비율을 강제 */
+    aspect-ratio: 1 / 1;
     overflow: hidden;
   }
 `;
