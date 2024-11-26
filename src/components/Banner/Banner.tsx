@@ -48,7 +48,12 @@ const Banner = () => {
             <div className="container" key={index}>
               <picture>
                 <source srcSet={image.webp} type="image/webp" />
-                <img src={image.jpg} alt="profile image" className="profile-image" />
+                <img
+                  src={image.jpg}
+                  alt="profile image"
+                  className="profile-image"
+                  loading="eager"
+                />
               </picture>
             </div>
           ))}
