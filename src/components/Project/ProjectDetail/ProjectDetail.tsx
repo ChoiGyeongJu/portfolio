@@ -55,7 +55,7 @@ const ProjectDetail = ({ projectInfo, onClose }: Props) => {
           <SliderWrap {...settings}>
             {projectInfo.images.map((image: string, index: number) => (
               <div className="container" key={index}>
-                <img src={image} loading="lazy" className="profile-image" />
+                <img src={image} className="profile-image" alt="project image" />
               </div>
             ))}
           </SliderWrap>

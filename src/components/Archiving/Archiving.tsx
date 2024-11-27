@@ -18,14 +18,14 @@ const Archiving = () => {
       <FadeWrapper>
         <ContentWrap>
           <Content onClick={() => handleClickItem('github')}>
-            <img className="github" src={GithubIcon} />
+            <img className="github" src={GithubIcon} alt="github icon" />
             <a href="https://github.com/ChoiGyeongJu" target="_blank">
               https://github.com/ChoiGyeongJu
             </a>
             <span>소스 코드 저장소</span>
           </Content>
           <Content onClick={() => handleClickItem('tistory')}>
-            <img className="blog" src={TistoryIcon} />
+            <img className="blog" src={TistoryIcon} alt="tistory icon" />
             <a href="https://gang-ju.tistory.com" target="_blank">
               https://gang-ju.tistory.com/
             </a>
