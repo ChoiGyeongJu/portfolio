@@ -14,7 +14,8 @@
 
 <p align="justify">
   저를 소개할 수 있는 개인 홈페이지를 제작하고자 이 프로젝트를 진행했습니다. <br>
-  PC 및 모바일에서 모두 원활하게 작동하도록 반응형으로 개발하였습니다.
+  PC 및 모바일에서 모두 원활하게 작동하도록 반응형으로 개발하였습니다. <br>
+  추가로, 구글 검색 엔진에 노출되도록 seo 작업을 진행했습니다.
 </p>
 
 <br>
@@ -72,6 +73,24 @@
   <img src="https://github.com/user-attachments/assets/e974af9c-0754-4a46-b333-86cfad58b113" width="500" alt="Career Section">
 </p>
 <p>이력과 관련된 정보를 보여줍니다.</p>
+
+<br>
+
+### 🔹 구글 검색 엔진 최적화
+
+<p align="left">
+  <img src="https://github.com/user-attachments/assets/0a36fd8e-0460-4cf7-a3cb-426a987dc28c" width="500" alt="Career Section">
+</p>
+
+<br>
+
+### 🔹 LightHouse 성능 개선
+
+<p align="left">
+  <img src="https://github.com/user-attachments/assets/62081396-dd9f-4f0d-b33c-689c41830319" width="500" alt="Career Section">
+  <img src="https://github.com/user-attachments/assets/99702820-894f-4745-916e-cad391496592" width="500" alt="Career Section">
+</p>
+
 
 <br>
 
