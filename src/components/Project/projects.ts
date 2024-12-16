@@ -75,11 +75,14 @@ export const projects = [
     title: 'GPT chat-bot',
     date: '2024.12 (개인 프로젝트)',
     description: 'openAI 기반 챗봇',
-    features: ['openAI 통신용 express 서버 구축', '로컬스토리지를 활용해 채팅 내역 관리'],
+    features: [
+      'openAI 통신용 express 서버 구축 및 vercel 배포',
+      '로컬스토리지를 활용해 채팅 내역 관리',
+    ],
     links: {
       notion: '',
       github: 'https://github.com/ChoiGyeongJu/openai-chatbot',
-      site: '',
+      site: 'https://chat-jupt.vercel.app',
     },
   },
   {
@@ -161,7 +164,11 @@ export const project_details = [
     description: `openAI 기반 챗봇`,
     images: [chat_pc, chat_delete, chat_mobile, chat_mobile_LNB],
     techStacks: ['node.js', 'express', 'React', 'TypeScript', 'styled-components', 'mui', 'Vite'],
-    works: ['openAI와 통신하는 express 서버 구축', '로컬스토리지를 활용해 채팅 내역 관리 (CRD)'],
+    works: [
+      'openAI와 통신하는 express 서버 구축',
+      '로컬스토리지를 활용해 채팅 내역 관리 (CRD)',
+      '백엔드&프론트엔드 vercel 배포',
+    ],
   },
   {
     id: 4,
