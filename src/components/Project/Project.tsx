@@ -40,7 +40,7 @@ const Project = () => {
   return (
     <Wrap>
       <FadeWrapper>
-        <Title label="PROJECTS" />
+        <Title label="PROJECTS" color="black" />
       </FadeWrapper>
       <FadeWrapper>
         <ContentWrap>
@@ -160,11 +160,13 @@ const Content = styled.div`
     border-bottom: 1px solid #ccc;
   }
   & .description {
+    color: black;
     font-size: 18px;
     font-weight: 700;
     margin-bottom: 6px;
   }
   & ul {
+    color: black;
     margin: 0;
     padding-left: 24px;
     text-align: start;

@@ -17,7 +17,7 @@ const Career = () => {
   return (
     <Wrap>
       <FadeWrapper>
-        <Title label="CAREER" />
+        <Title label="CAREER" color="white" />
       </FadeWrapper>
       <FadeWrapper>
         <Row>

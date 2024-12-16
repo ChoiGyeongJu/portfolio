@@ -55,6 +55,7 @@ const ContentWrap = styled.div`
 const Content = styled.div`
   cursor: pointer;
   background-color: white;
+  color: black;
   max-width: 80%;
   width: 400px;
   height: 220px;

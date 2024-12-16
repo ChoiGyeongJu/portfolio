@@ -117,6 +117,7 @@ const CloseButton = styled.button`
 `;
 
 const Content = styled.div`
+  color: black;
   padding: 120px 16px 16px;
   display: flex;
   flex-direction: column;

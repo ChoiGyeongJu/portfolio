@@ -34,7 +34,7 @@ const Skills = () => {
   return (
     <Wrap>
       <FadeWrapper>
-        <Title label="SKILLS" />
+        <Title label="SKILLS" color="black" />
       </FadeWrapper>
       <FadeWrapper>
         <Col>
@@ -96,6 +96,7 @@ const Row = styled.div`
   align-items: start;
 
   & .category {
+    color: black;
     display: flex;
     align-items: center;
     gap: 12px;

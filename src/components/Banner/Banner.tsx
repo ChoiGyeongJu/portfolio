@@ -121,6 +121,7 @@ const SliderWrap = styled(Slider)`
 `;
 
 const Right = styled.h1`
+  color: black;
   width: 50%;
   padding-left: 80px;
   display: flex;

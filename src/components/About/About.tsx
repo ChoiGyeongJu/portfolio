@@ -22,9 +22,9 @@ const About = () => {
   ];
 
   return (
-    <>
+    <Wrap>
       <FadeWrapper>
-        <Title label="ABOUT" />
+        <Title label="ABOUT" color="black" />
       </FadeWrapper>
       <FadeWrapper>
         <InfoWrap>
@@ -39,11 +39,17 @@ const About = () => {
           ))}
         </InfoWrap>
       </FadeWrapper>
-    </>
+    </Wrap>
   );
 };
 
 export default About;
+
+const Wrap = styled.div`
+  background-color: white;
+  color: black;
+  padding-bottom: 60px;
+`;
 
 const InfoWrap = styled.div`
   display: flex;
@@ -51,7 +57,7 @@ const InfoWrap = styled.div`
   align-items: center;
   justify-content: center;
   max-width: 1300px;
-  margin: 60px auto;
+  margin: 0 auto;
 
   & svg {
     width: 32px;
