@@ -4,12 +4,12 @@ import { TypeAnimation } from 'react-type-animation';
 
 import styled from 'styled-components';
 
-import Image1JPG from '../../assets/image1.jpg';
-import Image1WebP from '../../assets/image1.webp';
-import Image2JPG from '../../assets/image2.jpg';
-import Image2WebP from '../../assets/image2.webp';
-import Image3JPG from '../../assets/image3.jpg';
-import Image3WebP from '../../assets/image3.webp';
+import Image1JPG from '$assets/profile/image1.jpg';
+import Image1WebP from '$assets/profile/image1.webp';
+import Image2JPG from '$assets/profile/image2.jpg';
+import Image2WebP from '$assets/profile/image2.webp';
+import Image3JPG from '$assets/profile/image3.jpg';
+import Image3WebP from '$assets/profile/image3.webp';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 
