@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
+import { useNavigate } from 'react-router-dom';
 
 import styled from 'styled-components';
 
-const MenuItems = ['ABOUT', 'SKILLS', 'ARCHIVING', 'PROJECTS', 'CAREER'];
+const MenuItems = ['Home', 'Resume', 'Work Experience', 'Github', 'Tistory'];
 
 const Header = () => {
+  const nav = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -13,34 +15,41 @@ const Header = () => {
 
   const handleClickItem = (target: string) => {
     setIsMenuOpen(false);
-    const elem = document.getElementById(target);
-    console.log(target, elem);
 
-    if (elem) {
-      requestAnimationFrame(() => {
-        const elemRect = elem.getBoundingClientRect();
-        const offset = elemRect.top + window.scrollY - 75;
-        window.scrollTo({ top: offset, behavior: 'smooth' });
-      });
+    switch (target) {
+      case 'Home':
+        nav('/portfolio/home');
+        break;
+      case 'Resume':
+        nav('/portfolio/resume');
+        break;
+      case 'Work Experience':
+        nav('/portfolio/experience');
+        break;
+      case 'Github':
+        window.open('https://github.com/ChoiGyeongJu', '_blank');
+        break;
+      case 'Tistory':
+        window.open('https://gang-ju.tistory.com', '_blank');
+        break;
+      default:
+        break;
     }
   };
 
   return (
     <Wrapper>
       <Container>
-        <LeftArea>최경주 Portfolio</LeftArea>
-        <RightArea>
-          <MenuIcon onClick={toggleMenu}>
-            {isMenuOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
-          </MenuIcon>
-          <Menu isOpen={isMenuOpen}>
-            {MenuItems.map(v => (
-              <div key={v} onClick={() => handleClickItem(v)}>
-                {v}
-              </div>
-            ))}
-          </Menu>
-        </RightArea>
+        <MenuIcon onClick={toggleMenu}>
+          {isMenuOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
+        </MenuIcon>
+        <Menu isOpen={isMenuOpen}>
+          {MenuItems.map(v => (
+            <div key={v} onClick={() => handleClickItem(v)}>
+              {v}
+            </div>
+          ))}
+        </Menu>
       </Container>
     </Wrapper>
   );
@@ -54,14 +63,15 @@ const Wrapper = styled.header`
   position: fixed;
   top: 0;
   z-index: 99;
-  background-color: #02343f;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 `;
 
 const Container = styled.div`
   width: 1200px;
   max-width: 90%;
   height: 100%;
-  color: white;
+  color: black;
   font-weight: 700;
   font-size: 22px;
   display: flex;
@@ -71,33 +81,23 @@ const Container = styled.div`
   align-items: center;
 `;
 
-const LeftArea = styled.div``;
-
-const RightArea = styled.div`
-  cursor: pointer;
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-
-  @media (max-width: 800px) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-`;
-
 const MenuIcon = styled.div`
   font-size: 28px;
   display: none;
 
   @media (max-width: 800px) {
     display: block;
+    margin-left: auto;
   }
 `;
 
 const Menu = styled.div<{ isOpen: boolean }>`
   display: flex;
-  gap: 16px;
+  justify-content: space-between;
+  width: 100%;
+  & div {
+    cursor: pointer;
+  }
 
   @media (max-width: 800px) {
     flex-direction: column;
@@ -105,8 +105,9 @@ const Menu = styled.div<{ isOpen: boolean }>`
     position: absolute;
     top: 80px;
     left: 0;
-    background-color: #02343f;
+    background-color: white;
     width: 100%;
-    padding: 16px 0;
+    padding-bottom: 16px;
+    gap: 20px;
   }
 `;
