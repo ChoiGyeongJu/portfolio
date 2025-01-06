@@ -1,4 +1,5 @@
-import { Fade } from 'react-awesome-reveal';
+import { ReactNode } from 'react';
+import { Fade, FadeProps } from 'react-awesome-reveal';
 
 import styled from 'styled-components';
 
@@ -14,10 +15,16 @@ const SKILL_LIST = [
   'Tanstack Query',
 ];
 
+interface Props extends FadeProps {
+  children: ReactNode;
+}
+
 const Career = () => {
+  const FadeWrapper = Fade as React.FC<Props>;
+
   return (
     <Wrap>
-      <Fade>
+      <FadeWrapper>
         <Row>
           <LeftArea />
           <RightArea>
@@ -54,7 +61,7 @@ const Career = () => {
             </TaskWrapper>
           </RightArea>
         </Row>
-      </Fade>
+      </FadeWrapper>
     </Wrap>
   );
 };
