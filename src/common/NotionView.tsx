@@ -10,7 +10,8 @@ interface Props {
 }
 
 const fetchNotionData = async (pageId: string) => {
-  const response = await fetch('/notion-api/api/v3/loadPageChunk', {
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+  const response = await fetch(`${API_BASE_URL}/api/notion`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
