@@ -10,13 +10,5 @@ export default defineConfig({
   server: {
     port: 3000,
     open: true,
-    proxy: {
-      '/notion-api': {
-        target: 'https://www.notion.so',
-        changeOrigin: true,
-        secure: true,
-        rewrite: path => path.replace(/^\/notion-api/, ''),
-      },
-    },
   },
 });

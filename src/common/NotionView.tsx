@@ -10,8 +10,7 @@ interface Props {
 }
 
 const fetchNotionData = async (pageId: string) => {
-  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
-  const response = await fetch(`${API_BASE_URL}/api/notion`, {
+  const response = await fetch(`https://openai-chatbot-lilac.vercel.app/api/notion`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
