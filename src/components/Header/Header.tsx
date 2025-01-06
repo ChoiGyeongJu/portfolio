@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 import styled from 'styled-components';
 
-const MenuItems = ['Home', 'Resume', 'Work Experience', 'Github', 'Tistory'];
+const MenuItems = ['Home', 'Resume', 'Work Experience', 'Career', 'Github'];
 
 const Header = () => {
   const nav = useNavigate();
@@ -15,6 +15,7 @@ const Header = () => {
 
   const handleClickItem = (target: string) => {
     setIsMenuOpen(false);
+    window.scrollTo({ top: 0 });
 
     switch (target) {
       case 'Home':
@@ -29,8 +30,8 @@ const Header = () => {
       case 'Github':
         window.open('https://github.com/ChoiGyeongJu', '_blank');
         break;
-      case 'Tistory':
-        window.open('https://gang-ju.tistory.com', '_blank');
+      case 'Career':
+        nav('/portfolio/career');
         break;
       default:
         break;

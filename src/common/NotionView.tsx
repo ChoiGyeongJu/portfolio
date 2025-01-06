@@ -1,6 +1,7 @@
-import { useEffect, useState } from 'react';
 import { NotionRenderer } from 'react-notion-x';
 import 'react-notion-x/src/styles.css';
+
+import { useQuery } from '@tanstack/react-query';
 
 import styled from 'styled-components';
 
@@ -8,41 +9,33 @@ interface Props {
   pageId: string;
 }
 
+const fetchNotionData = async (pageId: string) => {
+  const response = await fetch('/notion-api/api/v3/loadPageChunk', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      pageId,
+      limit: 100,
+      chunkNumber: 0,
+      cursor: { stack: [] },
+      verticalColumns: false,
+    }),
+  });
+
+  if (!response.ok) {
+    throw new Error('Failed to fetch Notion data');
+  }
+
+  return response.json();
+};
+
 const NotionView = ({ pageId }: Props) => {
-  const [notionData, setNotionData] = useState(null);
-
-  useEffect(() => {
-    const fetchNotionData = async () => {
-      try {
-        const response = await fetch('/notion-api/api/v3/loadPageChunk', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            pageId: pageId,
-            limit: 100,
-            chunkNumber: 0,
-            cursor: {
-              stack: [],
-            },
-            verticalColumns: false,
-          }),
-        });
-
-        if (!response.ok) {
-          throw new Error('Failed to fetch Notion data');
-        }
-
-        const data = await response.json();
-        setNotionData(data);
-      } catch (error) {
-        console.error('Error fetching Notion data:', error);
-      }
-    };
-
-    fetchNotionData();
-  }, []);
+  const { data: notionData } = useQuery({
+    queryKey: ['notionData', pageId],
+    queryFn: () => fetchNotionData(pageId),
+  });
 
   return (
     <Wrapper>
@@ -50,8 +43,7 @@ const NotionView = ({ pageId }: Props) => {
         <NotionRenderer
           recordMap={notionData.recordMap}
           fullPage={true}
-          mapPageUrl={pageId => `/portfolio/project/${pageId}`}
-          components={{}}
+          mapPageUrl={id => `/portfolio/project/${id}`}
         />
       )}
     </Wrapper>

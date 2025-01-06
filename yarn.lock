@@ -1037,6 +1037,43 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tanstack/query-core@npm:5.62.15":
+  version: 5.62.15
+  resolution: "@tanstack/query-core@npm:5.62.15"
+  checksum: 10c0/e79ce47749e7ed3cb09b1d489a8688baa6b2b1af389032178dd39b64e9627b4a5a88ca1add5f7ceddf60e65603562f8ba55297c43796104f0fc2c15a893019ea
+  languageName: node
+  linkType: hard
+
+"@tanstack/query-devtools@npm:5.62.9":
+  version: 5.62.9
+  resolution: "@tanstack/query-devtools@npm:5.62.9"
+  checksum: 10c0/214ef366435e3720e4bb23a247c319f13df3bda790c6df4aca7051168ca197b2b1109f6215ab57e17797ca82206d5f6ae9449325f3c3bba249d239a5c60b7f8e
+  languageName: node
+  linkType: hard
+
+"@tanstack/react-query-devtools@npm:^5.62.15":
+  version: 5.62.15
+  resolution: "@tanstack/react-query-devtools@npm:5.62.15"
+  dependencies:
+    "@tanstack/query-devtools": "npm:5.62.9"
+  peerDependencies:
+    "@tanstack/react-query": ^5.62.15
+    react: ^18 || ^19
+  checksum: 10c0/1c95c2f9da0fb86599fe3e7ee28e1fa17cb4d227cdeab163f0528e7221a540847e533fd8a1cc9ef487b520bca2271f5e61232355e7f45d6822c70a909c53c0ae
+  languageName: node
+  linkType: hard
+
+"@tanstack/react-query@npm:^5.62.15":
+  version: 5.62.15
+  resolution: "@tanstack/react-query@npm:5.62.15"
+  dependencies:
+    "@tanstack/query-core": "npm:5.62.15"
+  peerDependencies:
+    react: ^18 || ^19
+  checksum: 10c0/e9cedd69590d2f011196988bd13f9e10e1fc0a0722cf7c3a041ddc1a887c011f0ff951683085ff9ba2a936432752391fb404e3d4978cb21b38fe38fc31d5312b
+  languageName: node
+  linkType: hard
+
 "@trivago/prettier-plugin-sort-imports@npm:^4.3.0":
   version: 4.3.0
   resolution: "@trivago/prettier-plugin-sort-imports@npm:4.3.0"
@@ -3809,6 +3846,8 @@ __metadata:
     "@babel/runtime": "npm:^7.26.0"
     "@emotion/react": "npm:^11.13.3"
     "@eslint/js": "npm:^9.11.1"
+    "@tanstack/react-query": "npm:^5.62.15"
+    "@tanstack/react-query-devtools": "npm:^5.62.15"
     "@trivago/prettier-plugin-sort-imports": "npm:^4.3.0"
     "@types/gh-pages": "npm:^6"
     "@types/node": "npm:^22.7.5"

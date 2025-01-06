@@ -1,7 +1,8 @@
+import { Fade } from 'react-awesome-reveal';
+
 import styled from 'styled-components';
 
 import TmaxLogo from '../../assets/tmax.png';
-import { FadeWrapper, Title } from '../../common';
 
 const SKILL_LIST = [
   'React',
@@ -16,10 +17,7 @@ const SKILL_LIST = [
 const Career = () => {
   return (
     <Wrap>
-      <FadeWrapper>
-        <Title label="CAREER" color="white" />
-      </FadeWrapper>
-      <FadeWrapper>
+      <Fade>
         <Row>
           <LeftArea />
           <RightArea>
@@ -56,7 +54,7 @@ const Career = () => {
             </TaskWrapper>
           </RightArea>
         </Row>
-      </FadeWrapper>
+      </Fade>
     </Wrap>
   );
 };
@@ -69,6 +67,7 @@ const Wrap = styled.div`
   margin: 0 auto;
   width: 1240px;
   max-width: 80%;
+  padding-top: 120px;
 `;
 
 const Row = styled.div`

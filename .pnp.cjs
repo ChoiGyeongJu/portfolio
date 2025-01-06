@@ -30,6 +30,8 @@ const RAW_RUNTIME_STATE =
           ["@babel/runtime", "npm:7.26.0"],\
           ["@emotion/react", "virtual:7d5abf024f2f4d5792bfe5aec1c4f41bb644e527377e1381ba17346aadc942947c084329cdaeb7d98abe55ea00d1be0c95014e301478286b6674ee5717ee32d5#npm:11.13.3"],\
           ["@eslint/js", "npm:9.12.0"],\
+          ["@tanstack/react-query", "virtual:7d5abf024f2f4d5792bfe5aec1c4f41bb644e527377e1381ba17346aadc942947c084329cdaeb7d98abe55ea00d1be0c95014e301478286b6674ee5717ee32d5#npm:5.62.15"],\
+          ["@tanstack/react-query-devtools", "virtual:7d5abf024f2f4d5792bfe5aec1c4f41bb644e527377e1381ba17346aadc942947c084329cdaeb7d98abe55ea00d1be0c95014e301478286b6674ee5717ee32d5#npm:5.62.15"],\
           ["@trivago/prettier-plugin-sort-imports", "virtual:7d5abf024f2f4d5792bfe5aec1c4f41bb644e527377e1381ba17346aadc942947c084329cdaeb7d98abe55ea00d1be0c95014e301478286b6674ee5717ee32d5#npm:4.3.0"],\
           ["@types/gh-pages", "npm:6.1.0"],\
           ["@types/node", "npm:22.7.5"],\
@@ -1343,6 +1345,74 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/unplugged/@rollup-rollup-win32-x64-msvc-npm-4.24.0-1ea88baa4a/node_modules/@rollup/rollup-win32-x64-msvc/",\
         "packageDependencies": [\
           ["@rollup/rollup-win32-x64-msvc", "npm:4.24.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@tanstack/query-core", [\
+      ["npm:5.62.15", {\
+        "packageLocation": "./.yarn/cache/@tanstack-query-core-npm-5.62.15-4e347626ba-e79ce47749.zip/node_modules/@tanstack/query-core/",\
+        "packageDependencies": [\
+          ["@tanstack/query-core", "npm:5.62.15"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@tanstack/query-devtools", [\
+      ["npm:5.62.9", {\
+        "packageLocation": "./.yarn/cache/@tanstack-query-devtools-npm-5.62.9-ccd07b41aa-214ef36643.zip/node_modules/@tanstack/query-devtools/",\
+        "packageDependencies": [\
+          ["@tanstack/query-devtools", "npm:5.62.9"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@tanstack/react-query", [\
+      ["npm:5.62.15", {\
+        "packageLocation": "./.yarn/cache/@tanstack-react-query-npm-5.62.15-fe6f88e489-e9cedd6959.zip/node_modules/@tanstack/react-query/",\
+        "packageDependencies": [\
+          ["@tanstack/react-query", "npm:5.62.15"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:7d5abf024f2f4d5792bfe5aec1c4f41bb644e527377e1381ba17346aadc942947c084329cdaeb7d98abe55ea00d1be0c95014e301478286b6674ee5717ee32d5#npm:5.62.15", {\
+        "packageLocation": "./.yarn/__virtual__/@tanstack-react-query-virtual-7ec37ce0d2/0/cache/@tanstack-react-query-npm-5.62.15-fe6f88e489-e9cedd6959.zip/node_modules/@tanstack/react-query/",\
+        "packageDependencies": [\
+          ["@tanstack/react-query", "virtual:7d5abf024f2f4d5792bfe5aec1c4f41bb644e527377e1381ba17346aadc942947c084329cdaeb7d98abe55ea00d1be0c95014e301478286b6674ee5717ee32d5#npm:5.62.15"],\
+          ["@tanstack/query-core", "npm:5.62.15"],\
+          ["@types/react", "npm:18.3.11"],\
+          ["react", "npm:18.3.1"]\
+        ],\
+        "packagePeers": [\
+          "@types/react",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@tanstack/react-query-devtools", [\
+      ["npm:5.62.15", {\
+        "packageLocation": "./.yarn/cache/@tanstack-react-query-devtools-npm-5.62.15-b8f83eed80-1c95c2f9da.zip/node_modules/@tanstack/react-query-devtools/",\
+        "packageDependencies": [\
+          ["@tanstack/react-query-devtools", "npm:5.62.15"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:7d5abf024f2f4d5792bfe5aec1c4f41bb644e527377e1381ba17346aadc942947c084329cdaeb7d98abe55ea00d1be0c95014e301478286b6674ee5717ee32d5#npm:5.62.15", {\
+        "packageLocation": "./.yarn/__virtual__/@tanstack-react-query-devtools-virtual-334694d2a6/0/cache/@tanstack-react-query-devtools-npm-5.62.15-b8f83eed80-1c95c2f9da.zip/node_modules/@tanstack/react-query-devtools/",\
+        "packageDependencies": [\
+          ["@tanstack/react-query-devtools", "virtual:7d5abf024f2f4d5792bfe5aec1c4f41bb644e527377e1381ba17346aadc942947c084329cdaeb7d98abe55ea00d1be0c95014e301478286b6674ee5717ee32d5#npm:5.62.15"],\
+          ["@tanstack/query-devtools", "npm:5.62.9"],\
+          ["@tanstack/react-query", "virtual:7d5abf024f2f4d5792bfe5aec1c4f41bb644e527377e1381ba17346aadc942947c084329cdaeb7d98abe55ea00d1be0c95014e301478286b6674ee5717ee32d5#npm:5.62.15"],\
+          ["@types/react", "npm:18.3.11"],\
+          ["@types/tanstack__react-query", null],\
+          ["react", "npm:18.3.1"]\
+        ],\
+        "packagePeers": [\
+          "@tanstack/react-query",\
+          "@types/react",\
+          "@types/tanstack__react-query",\
+          "react"\
         ],\
         "linkType": "HARD"\
       }]\
@@ -4563,6 +4633,8 @@ const RAW_RUNTIME_STATE =
           ["@babel/runtime", "npm:7.26.0"],\
           ["@emotion/react", "virtual:7d5abf024f2f4d5792bfe5aec1c4f41bb644e527377e1381ba17346aadc942947c084329cdaeb7d98abe55ea00d1be0c95014e301478286b6674ee5717ee32d5#npm:11.13.3"],\
           ["@eslint/js", "npm:9.12.0"],\
+          ["@tanstack/react-query", "virtual:7d5abf024f2f4d5792bfe5aec1c4f41bb644e527377e1381ba17346aadc942947c084329cdaeb7d98abe55ea00d1be0c95014e301478286b6674ee5717ee32d5#npm:5.62.15"],\
+          ["@tanstack/react-query-devtools", "virtual:7d5abf024f2f4d5792bfe5aec1c4f41bb644e527377e1381ba17346aadc942947c084329cdaeb7d98abe55ea00d1be0c95014e301478286b6674ee5717ee32d5#npm:5.62.15"],\
           ["@trivago/prettier-plugin-sort-imports", "virtual:7d5abf024f2f4d5792bfe5aec1c4f41bb644e527377e1381ba17346aadc942947c084329cdaeb7d98abe55ea00d1be0c95014e301478286b6674ee5717ee32d5#npm:4.3.0"],\
           ["@types/gh-pages", "npm:6.1.0"],\
           ["@types/node", "npm:22.7.5"],\
