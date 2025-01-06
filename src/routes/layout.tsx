@@ -8,6 +8,11 @@ const Layout: React.FC = () => {
   return (
     <LayoutWrapper>
       <Header />
+      <Today>
+        <a href="https://hits.seeyoufarm.com">
+          <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fchoigyeongju.github.io%2Fportfolio&count_bg=%23929292&title_bg=%23929292&icon=&icon_color=%23000000&title=Today&edge_flat=false" />
+        </a>
+      </Today>
       <MainContent>
         <Outlet />
       </MainContent>
@@ -29,4 +34,10 @@ const MainContent = styled.div`
   height: 100%;
   display: flex;
   margin: 0 auto;
+`;
+
+const Today = styled.div`
+  position: absolute;
+  right: 12px;
+  top: 96px;
 `;

@@ -77,14 +77,20 @@ export default Banner;
 
 const Wrapper = styled.div`
   width: 100%;
+  height: fit-content;
   margin-top: 80px;
   padding: 120px 0;
   display: flex;
   flex-direction: row;
-  background: beige;
+  .slick-dots {
+    bottom: -120px;
+  }
   @media (max-width: 1024px) {
     flex-direction: column;
     align-items: center;
+    .slick-dots {
+      bottom: -25px;
+    }
   }
 `;
 
@@ -93,6 +99,7 @@ const Left = styled.div`
   margin-right: 60px;
   display: flex;
   justify-content: end;
+  align-items: start;
   @media (max-width: 1024px) {
     width: 100%;
     margin-right: 0px;
@@ -109,6 +116,7 @@ const Left = styled.div`
 
 const SliderWrap = styled(Slider)`
   width: min(450px, 80%);
+  height: min(450px, 80%);
 
   & .container {
     display: flex !important;
@@ -136,6 +144,7 @@ const Right = styled.h1`
     width: 100%;
     padding-left: 0;
     align-items: center;
+    margin-top: 42px;
     & span {
       font-size: 24px;
     }
