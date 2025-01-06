@@ -1,7 +1,8 @@
 import { NotionView } from 'common';
+import { convertToUUID } from 'utils';
 
 const Experience = () => {
-  return <NotionView pageId="13759248-f588-802b-ab0c-f483faa33e35" />;
+  return <NotionView pageId={convertToUUID('13759248f588802bab0cf483faa33e35')} />;
 };
 
 export default Experience;

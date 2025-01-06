@@ -1,8 +1,10 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
-import { Main } from '../components';
 import Layout from './layout';
+import { Banner } from 'components/Banner';
 import { Experience } from 'components/Experience';
+import { Project } from 'components/Project';
+import { Resume } from 'components/Resume';
 
 const router = () => {
   return (
@@ -10,8 +12,10 @@ const router = () => {
       <Routes>
         <Route path="/portfolio" element={<Layout />}>
           <Route index element={<Navigate to="/portfolio/home" replace />} />
-          <Route path="home" element={<Main />} />
+          <Route path="home" element={<Banner />} />
+          <Route path="resume" element={<Resume />} />
           <Route path="experience" element={<Experience />} />
+          <Route path="project/:pageId" element={<Project />} />
 
           <Route path="*" element={<Navigate to="/portfolio/home" replace />} />
         </Route>

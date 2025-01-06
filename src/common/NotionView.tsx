@@ -46,7 +46,14 @@ const NotionView = ({ pageId }: Props) => {
 
   return (
     <Wrapper>
-      {notionData && <NotionRenderer recordMap={notionData.recordMap} fullPage={true} />}
+      {notionData && (
+        <NotionRenderer
+          recordMap={notionData.recordMap}
+          fullPage={true}
+          mapPageUrl={pageId => `/portfolio/project/${pageId}`}
+          components={{}}
+        />
+      )}
     </Wrapper>
   );
 };
@@ -58,8 +65,4 @@ const Wrapper = styled.div`
   z-index: 9;
   margin-top: 36px;
   text-align: left;
-
-  & .notion-page-icon-span {
-    left: 45px;
-  }
 `;
