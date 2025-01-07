@@ -1,7 +1,11 @@
 import { useState } from 'react';
-import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
+import { AiOutlineMenu } from 'react-icons/ai';
+import { BsArrowRight } from 'react-icons/bs';
 import { useNavigate } from 'react-router-dom';
 
+import { Drawer } from '@mui/material';
+
+import { useDarkmode } from 'hooks';
 import styled from 'styled-components';
 
 import ThemeSwitch from './ThemeSwitch';
@@ -9,8 +13,11 @@ import ThemeSwitch from './ThemeSwitch';
 const MenuItems = ['Home', 'Resume', 'Work Experience', 'Career', 'Github'];
 
 const Header = () => {
+  const { isDarkMode } = useDarkmode();
   const nav = useNavigate();
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -44,7 +51,7 @@ const Header = () => {
     <Wrapper>
       <Container>
         <MenuIcon onClick={toggleMenu}>
-          {isMenuOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
+          <AiOutlineMenu />
         </MenuIcon>
         <Menu isOpen={isMenuOpen}>
           {MenuItems.map(v => (
@@ -53,6 +60,21 @@ const Header = () => {
             </div>
           ))}
         </Menu>
+        <StyledDrawer
+          isDarkMode={isDarkMode}
+          anchor="right"
+          open={isMenuOpen}
+          onClose={() => setIsMenuOpen(false)}
+        >
+          <DrawerContent>
+            {MenuItems.map(v => (
+              <div key={v} onClick={() => handleClickItem(v)}>
+                {v}
+                <BsArrowRight />
+              </div>
+            ))}
+          </DrawerContent>
+        </StyledDrawer>
         <SwitchWrapper>
           <ThemeSwitch />
         </SwitchWrapper>
@@ -82,6 +104,7 @@ const Container = styled.div`
   justify-content: space-between;
   margin: 0 auto;
   align-items: center;
+
   @media (min-width: 960px) {
     padding: 0 12%;
   }
@@ -107,17 +130,7 @@ const Menu = styled.div<{ isOpen: boolean }>`
   }
 
   @media (max-width: 960px) {
-    width: 100%;
-    flex-direction: column;
-    position: absolute;
-    top: 80px;
-    left: 0;
-    overflow: hidden;
-    padding-bottom: ${props => props.isOpen && '16px'};
-    gap: ${({ isOpen }) => (isOpen ? '20px' : '0')};
-    max-height: ${({ isOpen }) => (isOpen ? '300px' : '0')};
-    transition: max-height 0.2s ease-in-out, gap 0.2s ease-in-out;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
   }
 `;
 
@@ -128,5 +141,26 @@ const SwitchWrapper = styled.div`
 
   @media (max-width: 960px) {
     left: 5%;
+  }
+`;
+
+const StyledDrawer = styled(Drawer)<{ isDarkMode: boolean }>`
+  .MuiDrawer-paper {
+    background-color: ${({ isDarkMode }) => (isDarkMode ? '#2f3437' : '#ffffff')};
+    color: ${({ isDarkMode }) => (isDarkMode ? '#ebebeb' : '#000000')};
+    width: min(70%, 360px);
+    font-weight: 700;
+  }
+`;
+
+const DrawerContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 18px;
+  & div {
+    display: flex;
+    align-items: center;
+    gap: 6px;
   }
 `;

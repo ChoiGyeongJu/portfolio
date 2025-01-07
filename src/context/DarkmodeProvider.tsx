@@ -10,10 +10,9 @@ interface DarkModeContextType {
 export const DarkModeContext = createContext<DarkModeContextType | undefined>(undefined);
 
 const GlobalStyle = createGlobalStyle<{ isDarkMode: boolean }>`
-  body, header, div {
+  body, header {
     background-color: ${({ isDarkMode }) => (isDarkMode ? '#2f3437' : '#ffffff')};
     color: ${({ isDarkMode }) => (isDarkMode ? '#ebebeb' : '#000000')};
-    transition: background-color 0.1s, color 0.1s;
   }
 `;
 
