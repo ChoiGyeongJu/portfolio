@@ -53,6 +53,7 @@ const NotionView = ({ pageId }: Props) => {
 export default NotionView;
 
 const Wrapper = styled.div`
+  width: 100%;
   margin: 0 auto;
   z-index: 9;
   margin-top: 36px;
