@@ -43,7 +43,7 @@ Error generating stack: `+o.message+`
     background-color: ${({isDarkMode:e})=>e?"#2f3437":"#ffffff"};
     color: ${({isDarkMode:e})=>e?"#ebebeb":"#000000"};
   }
-`,bO=({children:e})=>{const[t,n]=P.useState(!1),r=()=>{n(i=>!i)};return m.jsx(_b.Provider,{value:{isDarkMode:t,toggleDarkMode:r},children:m.jsxs(gO,{theme:{isDarkMode:t},children:[m.jsx(SO,{isDarkMode:t}),e]})})};/**
+`,bO=({children:e})=>{const[t,n]=P.useState(!0),r=()=>{n(i=>!i)};return m.jsx(_b.Provider,{value:{isDarkMode:t,toggleDarkMode:r},children:m.jsxs(gO,{theme:{isDarkMode:t},children:[m.jsx(SO,{isDarkMode:t}),e]})})};/**
  * @remix-run/router v1.20.0
  *
  * Copyright (c) Remix Software Inc.
@@ -712,6 +712,12 @@ See: https://github.com/francoischalifour/medium-zoom`)}},KN=function(t){var n=d
   z-index: 9;
   margin-top: 36px;
   text-align: left;
+
+  & .notion-asset-wrapper {
+    & div {
+      width: 100% !important;
+    }
+  }
 `,lI=Ke.div`
   display: flex;
   align-items: center;
