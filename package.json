@@ -14,7 +14,9 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.26.0",
-    "@emotion/react": "^11.13.3",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/material": "^6.3.1",
     "@tanstack/react-query": "^5.62.15",
     "notion-client": "^7.1.5",
     "react": "^18.3.1",
