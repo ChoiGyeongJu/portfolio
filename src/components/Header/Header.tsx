@@ -96,19 +96,23 @@ const Menu = styled.div<{ isOpen: boolean }>`
   display: flex;
   justify-content: space-between;
   width: 100%;
+  transition: all 0.2s ease-in-out;
   & div {
     cursor: pointer;
   }
 
   @media (max-width: 800px) {
+    width: 100%;
     flex-direction: column;
-    display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')};
     position: absolute;
     top: 80px;
     left: 0;
     background-color: white;
-    width: 100%;
-    padding-bottom: 16px;
-    gap: 20px;
+    overflow: hidden;
+    padding-bottom: ${props => props.isOpen && '16px'};
+    gap: ${({ isOpen }) => (isOpen ? '20px' : '0')};
+    max-height: ${({ isOpen }) => (isOpen ? '300px' : '0')};
+    transition: max-height 0.2s ease-in-out, gap 0.2s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 `;
