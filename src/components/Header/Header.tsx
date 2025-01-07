@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 
 import styled from 'styled-components';
 
+import ThemeSwitch from './ThemeSwitch';
+
 const MenuItems = ['Home', 'Resume', 'Work Experience', 'Career', 'Github'];
 
 const Header = () => {
@@ -51,6 +53,9 @@ const Header = () => {
             </div>
           ))}
         </Menu>
+        <SwitchWrapper>
+          <ThemeSwitch />
+        </SwitchWrapper>
       </Container>
     </Wrapper>
   );
@@ -64,15 +69,12 @@ const Wrapper = styled.header`
   position: fixed;
   top: 0;
   z-index: 99;
-  background-color: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 `;
 
 const Container = styled.div`
-  width: 1200px;
   max-width: 90%;
   height: 100%;
-  color: black;
   font-weight: 700;
   font-size: 22px;
   display: flex;
@@ -80,13 +82,16 @@ const Container = styled.div`
   justify-content: space-between;
   margin: 0 auto;
   align-items: center;
+  @media (min-width: 960px) {
+    padding: 0 12%;
+  }
 `;
 
 const MenuIcon = styled.div`
   font-size: 28px;
   display: none;
 
-  @media (max-width: 800px) {
+  @media (max-width: 960px) {
     display: block;
     margin-left: auto;
   }
@@ -101,18 +106,27 @@ const Menu = styled.div<{ isOpen: boolean }>`
     cursor: pointer;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 960px) {
     width: 100%;
     flex-direction: column;
     position: absolute;
     top: 80px;
     left: 0;
-    background-color: white;
     overflow: hidden;
     padding-bottom: ${props => props.isOpen && '16px'};
     gap: ${({ isOpen }) => (isOpen ? '20px' : '0')};
     max-height: ${({ isOpen }) => (isOpen ? '300px' : '0')};
     transition: max-height 0.2s ease-in-out, gap 0.2s ease-in-out;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+`;
+
+const SwitchWrapper = styled.div`
+  width: fit-content;
+  position: absolute;
+  right: 0;
+
+  @media (max-width: 960px) {
+    left: 5%;
   }
 `;

@@ -1,4 +1,4 @@
-import { TanstackQueryProvider } from 'context';
+import { TanstackQueryProvider, DarkModeProvider } from 'context';
 
 import './App.css';
 import { WebRouter } from './routes';
@@ -6,7 +6,9 @@ import { WebRouter } from './routes';
 function App() {
   return (
     <TanstackQueryProvider>
-      <WebRouter />
+      <DarkModeProvider>
+        <WebRouter />
+      </DarkModeProvider>
     </TanstackQueryProvider>
   );
 }

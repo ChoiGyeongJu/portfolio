@@ -3,6 +3,7 @@ import 'react-notion-x/src/styles.css';
 
 import { useQuery } from '@tanstack/react-query';
 
+import { useDarkmode } from 'hooks';
 import styled from 'styled-components';
 
 interface Props {
@@ -32,6 +33,8 @@ const fetchNotionData = async (pageId: string) => {
 };
 
 const NotionView = ({ pageId }: Props) => {
+  const { isDarkMode } = useDarkmode();
+
   const { data: notionData } = useQuery({
     queryKey: ['notionData', pageId],
     queryFn: () => fetchNotionData(pageId),
@@ -41,8 +44,9 @@ const NotionView = ({ pageId }: Props) => {
     <Wrapper>
       {notionData && (
         <NotionRenderer
-          recordMap={notionData.recordMap}
           fullPage={true}
+          darkMode={isDarkMode}
+          recordMap={notionData.recordMap}
           mapPageUrl={id => `/portfolio/project/${id}`}
         />
       )}
