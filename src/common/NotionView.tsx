@@ -1,6 +1,8 @@
 import { NotionRenderer } from 'react-notion-x';
 import 'react-notion-x/src/styles.css';
 
+import Spinner from '@mui/material/CircularProgress';
+
 import { useQuery } from '@tanstack/react-query';
 
 import { useDarkmode } from 'hooks';
@@ -35,14 +37,18 @@ const fetchNotionData = async (pageId: string) => {
 const NotionView = ({ pageId }: Props) => {
   const { isDarkMode } = useDarkmode();
 
-  const { data: notionData } = useQuery({
+  const { data: notionData, isLoading } = useQuery({
     queryKey: ['notionData', pageId],
     queryFn: () => fetchNotionData(pageId),
   });
 
   return (
     <Wrapper>
-      {notionData && (
+      {isLoading ? (
+        <Loader>
+          <Spinner />
+        </Loader>
+      ) : (
         <NotionRenderer
           fullPage={true}
           darkMode={isDarkMode}
@@ -62,4 +68,11 @@ const Wrapper = styled.div`
   z-index: 9;
   margin-top: 36px;
   text-align: left;
+`;
+
+const Loader = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 `;
