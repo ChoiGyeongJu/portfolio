@@ -15,9 +15,9 @@ const router = () => {
           <Route index element={<Navigate to="/portfolio/home" replace />} />
           <Route path="home" element={<Banner />} />
           <Route path="resume" element={<Resume />} />
+          <Route path="resume/:pageId" element={<Project />} />
           <Route path="experience" element={<Experience />} />
           <Route path="career" element={<Career />} />
-          <Route path="project/:pageId" element={<Project />} />
 
           <Route path="*" element={<Navigate to="/portfolio/home" replace />} />
         </Route>
