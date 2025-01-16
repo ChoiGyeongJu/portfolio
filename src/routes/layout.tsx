@@ -40,4 +40,5 @@ const Today = styled.div`
   position: absolute;
   right: 12px;
   top: 96px;
+  z-index: 99;
 `;

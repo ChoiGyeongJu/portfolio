@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Slider, { Settings } from 'react-slick';
 import { TypeAnimation } from 'react-type-animation';
 
 import styled from 'styled-components';
+import { convertToUUID } from 'utils';
 
 import Image1JPG from '$assets/profile/image1.jpg';
 import Image1WebP from '$assets/profile/image1.webp';
@@ -15,6 +17,9 @@ import 'slick-carousel/slick/slick.css';
 
 const Banner = () => {
   const [visible, setVisible] = useState(false);
+  const [clickCount, setClickCount] = useState(0);
+  const navigate = useNavigate();
+
   useEffect(() => {
     setTimeout(() => {
       setVisible(true);
@@ -40,12 +45,19 @@ const Banner = () => {
     nextArrow: <></>,
   };
 
+  const handleTriggerEasterEgg = () => {
+    setClickCount(prev => prev + 1);
+    if (clickCount + 1 === 15) {
+      navigate(`/portfolio/easterEgg/${convertToUUID('18459248f5888063bc75eac5e3c91928')}`); // 15회 클릭 시 이스터에그
+    }
+  };
+
   return (
     <Wrapper>
       <Left>
         <SliderWrap {...settings}>
           {images.map((image, index) => (
-            <div className="container" key={index}>
+            <div className="container" onClick={handleTriggerEasterEgg} key={index}>
               <picture>
                 <source srcSet={image.webp} type="image/webp" />
                 <img

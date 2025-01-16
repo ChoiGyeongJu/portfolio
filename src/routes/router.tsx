@@ -18,6 +18,7 @@ const router = () => {
           <Route path="resume/:pageId" element={<Project />} />
           <Route path="experience" element={<Experience />} />
           <Route path="career" element={<Career />} />
+          <Route path="easterEgg/:pageId" element={<Project />} />
 
           <Route path="*" element={<Navigate to="/portfolio/home" replace />} />
         </Route>
