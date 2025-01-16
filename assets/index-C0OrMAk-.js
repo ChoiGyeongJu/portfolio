@@ -196,7 +196,7 @@ To suppress this warning, you need to explicitly provide the \`palette.${t}Chann
   height: 80px;
   position: fixed;
   top: 0;
-  z-index: 99;
+  z-index: 999;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 `,D6=Ke.div`
   max-width: 90%;
