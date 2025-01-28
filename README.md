@@ -26,56 +26,47 @@
 ### 🔹 프로필 이미지 슬라이드 및 타이핑 애니메이션
 
 <p align="left">
-  <img src="https://github.com/user-attachments/assets/a2719ae7-5328-497d-9093-71a9fa5849e5" width="500" alt="Profile Image Slide and Typing Animation">
+  <img src="https://github.com/user-attachments/assets/a3b37400-1040-4a22-aaf1-774b22b3c0e2" width="500" alt="home section">
 </p>
-<p>페이지 상단에 프로필 이미지 슬라이더와 자기소개 타이핑 애니메이션을 적용하였습니다.</p>
+<p>랜딩페이지에 프로필 이미지 슬라이더와 자기소개 타이핑 애니메이션을 적용하였습니다.</p>
 
 <br>
 
-### 🔹 About
+### 🔹 Resume
 
 <p align="left">
-  <img src="https://github.com/user-attachments/assets/6e5d8919-52d7-456e-882d-f0068c71ecd6" width="500" alt="About Section">
+  <img src="https://github.com/user-attachments/assets/7472c0b2-8c7b-498b-80fa-38cca60a8815" width="500" alt="resume section">
 </p>
-<p>간단한 개인정보를 제공하는 섹션입니다.</p>
+<p>이력과 프로젝트들을 소개하는 섹션입니다.</p>
 
 <br>
 
-### 🔹 Skills
+### 🔹 Work Experience
 
 <p align="left">
-  <img src="https://github.com/user-attachments/assets/5342065d-6b58-45b6-8864-715549ece8f5" width="500" alt="Skills Section">
+  <img src="https://github.com/user-attachments/assets/a3655c0f-41b3-4908-883d-8c0bf744d61a" width="500" alt="work experience section">
 </p>
-<p>사용 가능한 기술 스택들을 시각적으로 보여줍니다.</p>
-
-<br>
-
-### 🔹 Archiving
-
-<p align="left">
-  <img src="https://github.com/user-attachments/assets/b19d520a-acb6-4e30-99f9-0ec5ed8b2dbc" width="500" alt="Archiving Section">
-</p>
-<p>운영 중인 저장소들을 소개하는 섹션입니다.</p>
-
-<br>
-
-### 🔹 Projects
-
-<p align="left">
-  <img src="https://github.com/user-attachments/assets/78a07bad-3059-40f9-8ff3-1dad6680e805" width="500" alt="Projects Section">
-</p>
-<p>진행했던 프로젝트를 간략하게 소개합니다.</p>
+<p>경력 기술 섹션 입니다.</p>
 
 <br>
 
 ### 🔹 Career
 
 <p align="left">
-  <img src="https://github.com/user-attachments/assets/e974af9c-0754-4a46-b333-86cfad58b113" width="500" alt="Career Section">
+  <img src="https://github.com/user-attachments/assets/c52046b0-1698-4ddd-89da-63f606c77f04" width="500" alt="career section">
 </p>
-<p>이력과 관련된 정보를 보여줍니다.</p>
+<p>회사 경력을 소개하는 섹션입니다.</p>
 
 <br>
+
+### 🔹 화이트/다크모드
+
+<p align="left">
+  <img src="https://github.com/user-attachments/assets/6e1ee361-5db1-4d9f-b3ae-5546380c7ea6" width="500" alt="white mode">
+</p>
+
+<br>
+
 
 ### 🔹 구글 검색 엔진 최적화
 
