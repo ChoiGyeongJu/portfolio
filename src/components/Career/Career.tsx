@@ -3,17 +3,7 @@ import { Fade, FadeProps } from 'react-awesome-reveal';
 
 import styled from 'styled-components';
 
-import TmaxLogo from '../../assets/tmax.png';
-
-const SKILL_LIST = [
-  'React',
-  'styled-component',
-  'Webpack',
-  'Vite',
-  'react-hook-form',
-  'Mobx',
-  'Tanstack Query',
-];
+import { CAREER_DATA } from './constants';
 
 interface Props extends FadeProps {
   children: ReactNode;
@@ -24,44 +14,36 @@ const Career = () => {
 
   return (
     <Wrap>
-      <FadeWrapper>
-        <Row>
-          <LeftArea />
-          <RightArea>
-            <h2 className="company">주식회사 티맥스와플</h2>
-            <span className="date">2023.05 - 2024.10 (1년 6개월)</span>
-            <p className="description">프론트엔드 개발 담당, 게시판 모듈 담당</p>
-            <div className="skill-list">
-              {SKILL_LIST.map(v => (
-                <div key={v} className="skill">
-                  {v}
-                </div>
+      {CAREER_DATA.map(career => (
+        <FadeWrapper key={career.company}>
+          <Row>
+            <LeftArea style={{ backgroundImage: career.logo ? `url(${career.logo})` : 'none' }} />
+            <RightArea>
+              <h2 className="company">{career.company}</h2>
+              <span className="date">{career.date}</span>
+              <p className="description">{career.description}</p>
+              <div className="skill-list">
+                {career.skills.map(v => (
+                  <div key={v} className="skill">
+                    {v}
+                  </div>
+                ))}
+              </div>
+              {career.tasks.map(task => (
+                <TaskWrapper key={task.title}>
+                  <div className="task-title">{task.title}</div>
+                  <span>{task.date}</span>
+                  <ul>
+                    {task.details.map((detail, i) => (
+                      <li key={i}>{detail}</li>
+                    ))}
+                  </ul>
+                </TaskWrapper>
               ))}
-            </div>
-            <TaskWrapper>
-              <div className="task-title">서울시 교육청 사업건</div>
-              <span>2024.08 - 퇴사</span>
-              <ul>
-                <li>React 기반의 게시판 서비스 개발</li>
-                <li>TanStack Query를 활용한 상태 관리 및 데이터 캐싱 최적화</li>
-                <li>Modal과 사용자 정보를 Context API와 Provider 패턴을 활용해 전역으로 관리</li>
-                <li>사내 npm 레지스트리 모듈 배포</li>
-              </ul>
-            </TaskWrapper>
-            <TaskWrapper>
-              <div className="task-title">(주)푸디스트 사업건</div>
-              <span>2023.06 - 2024.08</span>
-              <ul>
-                <li>React 기반의 게시판 & 차트 서비스 개발</li>
-                <li>Mobx를 활용한 전역 상태 관리</li>
-                <li>사내 npm 레지스트리 모듈 배포</li>
-                <li>react-helmet을 사용한 SEO 관련 메타 태그 관리</li>
-                <li>VOC 이슈 대응 및 고도화 작업</li>
-              </ul>
-            </TaskWrapper>
-          </RightArea>
-        </Row>
-      </FadeWrapper>
+            </RightArea>
+          </Row>
+        </FadeWrapper>
+      ))}
     </Wrap>
   );
 };
@@ -93,7 +75,7 @@ const LeftArea = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  background-image: url(${TmaxLogo});
+  /* background-image 는 인라인 스타일로 제어 */
   background-size: contain;
   background-position: center;
   min-width: 320px;

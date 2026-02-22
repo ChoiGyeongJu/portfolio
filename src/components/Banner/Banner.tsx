@@ -74,7 +74,7 @@ const Banner = () => {
       <Right>
         <TypeAnimation sequence={['안녕하세요!', 1000]} wrapper="span" speed={30} cursor={false} />
         <TypeAnimation
-          sequence={[1000, '2년차 프론트엔드 개발자', 1000]}
+          sequence={[1000, '3년차 프론트엔드 개발자', 1000]}
           wrapper="span"
           speed={30}
           cursor={false}

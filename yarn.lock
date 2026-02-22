@@ -4126,53 +4126,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mini-game@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "mini-game@workspace:."
-  dependencies:
-    "@babel/runtime": "npm:^7.26.0"
-    "@emotion/react": "npm:^11.14.0"
-    "@emotion/styled": "npm:^11.14.0"
-    "@eslint/js": "npm:^9.11.1"
-    "@mui/material": "npm:^6.3.1"
-    "@tanstack/react-query": "npm:^5.62.15"
-    "@tanstack/react-query-devtools": "npm:^5.62.15"
-    "@trivago/prettier-plugin-sort-imports": "npm:^4.3.0"
-    "@types/gh-pages": "npm:^6"
-    "@types/node": "npm:^22.7.5"
-    "@types/react": "npm:^18.3.10"
-    "@types/react-dom": "npm:^18.3.0"
-    "@types/react-modal": "npm:^3"
-    "@types/react-slick": "npm:^0.23.13"
-    "@types/slick-carousel": "npm:^1"
-    "@vitejs/plugin-react": "npm:^4.3.2"
-    eslint: "npm:^8.57.0"
-    eslint-config-prettier: "npm:^9.1.0"
-    eslint-plugin-react: "npm:^7.34.3"
-    eslint-plugin-react-hooks: "npm:^5.1.0-rc.0"
-    eslint-plugin-react-refresh: "npm:^0.4.12"
-    gh-pages: "npm:^6.2.0"
-    globals: "npm:^15.9.0"
-    notion-client: "npm:^7.1.5"
-    prettier: "npm:^2.3.2"
-    react: "npm:^18.3.1"
-    react-awesome-reveal: "npm:^3.8.1"
-    react-dom: "npm:^18.3.1"
-    react-icons: "npm:^5.3.0"
-    react-modal: "npm:^3.16.1"
-    react-notion-x: "npm:^7.2.5"
-    react-router-dom: "npm:^6.27.0"
-    react-slick: "npm:^0.30.2"
-    react-type-animation: "npm:^3.2.0"
-    slick-carousel: "npm:^1.8.1"
-    styled-components: "npm:^6.1.13"
-    typescript: "npm:^5.5.3"
-    typescript-eslint: "npm:^8.7.0"
-    vite: "npm:^5.4.8"
-    vite-tsconfig-paths: "npm:^5.0.1"
-  languageName: unknown
-  linkType: soft
-
 "minimatch@npm:^3.0.5, minimatch@npm:^3.1.1, minimatch@npm:^3.1.2":
   version: 3.1.2
   resolution: "minimatch@npm:3.1.2"
@@ -4720,6 +4673,53 @@ __metadata:
   checksum: 10c0/c56bda7769e04907a88423feb320babaed0711af8c436ce3e56763ab1021ba107c7b0cafb11cde7529f669cfc22bffcaebffb573645cbd63842ea9fb17cd7728
   languageName: node
   linkType: hard
+
+"portfolio@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "portfolio@workspace:."
+  dependencies:
+    "@babel/runtime": "npm:^7.26.0"
+    "@emotion/react": "npm:^11.14.0"
+    "@emotion/styled": "npm:^11.14.0"
+    "@eslint/js": "npm:^9.11.1"
+    "@mui/material": "npm:^6.3.1"
+    "@tanstack/react-query": "npm:^5.62.15"
+    "@tanstack/react-query-devtools": "npm:^5.62.15"
+    "@trivago/prettier-plugin-sort-imports": "npm:^4.3.0"
+    "@types/gh-pages": "npm:^6"
+    "@types/node": "npm:^22.7.5"
+    "@types/react": "npm:^18.3.10"
+    "@types/react-dom": "npm:^18.3.0"
+    "@types/react-modal": "npm:^3"
+    "@types/react-slick": "npm:^0.23.13"
+    "@types/slick-carousel": "npm:^1"
+    "@vitejs/plugin-react": "npm:^4.3.2"
+    eslint: "npm:^8.57.0"
+    eslint-config-prettier: "npm:^9.1.0"
+    eslint-plugin-react: "npm:^7.34.3"
+    eslint-plugin-react-hooks: "npm:^5.1.0-rc.0"
+    eslint-plugin-react-refresh: "npm:^0.4.12"
+    gh-pages: "npm:^6.2.0"
+    globals: "npm:^15.9.0"
+    notion-client: "npm:^7.1.5"
+    prettier: "npm:^2.3.2"
+    react: "npm:^18.3.1"
+    react-awesome-reveal: "npm:^3.8.1"
+    react-dom: "npm:^18.3.1"
+    react-icons: "npm:^5.3.0"
+    react-modal: "npm:^3.16.1"
+    react-notion-x: "npm:^7.2.5"
+    react-router-dom: "npm:^6.27.0"
+    react-slick: "npm:^0.30.2"
+    react-type-animation: "npm:^3.2.0"
+    slick-carousel: "npm:^1.8.1"
+    styled-components: "npm:^6.1.13"
+    typescript: "npm:^5.5.3"
+    typescript-eslint: "npm:^8.7.0"
+    vite: "npm:^5.4.8"
+    vite-tsconfig-paths: "npm:^5.0.1"
+  languageName: unknown
+  linkType: soft
 
 "possible-typed-array-names@npm:^1.0.0":
   version: 1.0.0
